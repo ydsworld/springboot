@@ -25,7 +25,8 @@ public class MainController {
 	
 	@RequestMapping("/employees")
 	public @ResponseBody List<Employee> listOfEmployees(){
-		
+		List<Employee> list =  (List<Employee>) service.findAll();
+		System.out.println("list size :" + list.size());
 			return (List<Employee>) service.findAll();
 	}
 }
