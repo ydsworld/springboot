@@ -34,9 +34,8 @@ public class MainController {
 	@RequestMapping("/employeein")
 	public @ResponseBody List<Employee> employeeIn(){
 		List<String> eList = new ArrayList<String>();
-		eList.add("PGX");
-		eList.add("QQQ");
-		eList.add("PIN");
+		eList.add("Jay");
+		eList.add("Anurag");
 		
 		System.out.println(eList.toString());
 		
