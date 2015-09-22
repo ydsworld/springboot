@@ -12,5 +12,7 @@ public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 
 	public Employee findByEname(String empName);
 //	public List<Customer> findByLastName(String lastName)
+	public List<Employee> findByEnameIn(List<String> employeeNames);
+	
 }
 

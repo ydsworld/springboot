@@ -1,5 +1,6 @@
 package com.ydsworld.springboot.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,4 +30,19 @@ public class MainController {
 		System.out.println("list size :" + list.size());
 			return (List<Employee>) service.findAll();
 	}
+	
+	@RequestMapping("/employeein")
+	public @ResponseBody List<Employee> employeeIn(){
+		List<String> eList = new ArrayList<String>();
+		eList.add("PGX");
+		eList.add("QQQ");
+		eList.add("PIN");
+		
+		System.out.println(eList.toString());
+		
+		List<Employee> list =  (List<Employee>) service.findByEnameIn(eList);
+		System.out.println("list size :" + list.size());
+			return list;
+	}
+	
 }
